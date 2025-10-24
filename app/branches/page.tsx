@@ -100,7 +100,7 @@ const branches: Branch[] = [
       "Baby Chairs",
     ],
     images: [
-      "/images/dishes/country chicken  - Copy.jpg",
+      "/images/unnamed.webp",
       "/images/dishes/mutton kothukari - Copy.jpg",
     ],
     capacity: 100,
