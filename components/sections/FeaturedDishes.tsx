@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -93,8 +93,6 @@ const featuredDishes: Dish[] = [
 ];
 
 const FeaturedDishes: React.FC = () => {
-  const [hoveredDish, setHoveredDish] = useState<string | null>(null);
-
   return (
     <section className="section-padding bg-gray-50">
       <div className="container">
@@ -122,8 +120,6 @@ const FeaturedDishes: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              onMouseEnter={() => setHoveredDish(dish.id)}
-              onMouseLeave={() => setHoveredDish(null)}
               className="card overflow-hidden group"
             >
               {/* Image Container */}

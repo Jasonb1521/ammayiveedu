@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Home, Search, ChevronLeft } from "lucide-react";
+import { Home, ChevronLeft } from "lucide-react";
 
 export default function NotFound() {
   return (

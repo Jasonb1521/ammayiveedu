@@ -50,7 +50,6 @@ const locations: Location[] = [
 
 const LocationSelector: React.FC = () => {
   const [selectedLocation, setSelectedLocation] = useState<Location>(locations[0]);
-  const [hoveredLocation, setHoveredLocation] = useState<string | null>(null);
 
   return (
     <section className="section-padding bg-gray-50">
@@ -80,8 +79,6 @@ const LocationSelector: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                onMouseEnter={() => setHoveredLocation(location.id)}
-                onMouseLeave={() => setHoveredLocation(null)}
                 onClick={() => setSelectedLocation(location)}
                 className={`card p-6 cursor-pointer transition-all ${
                   selectedLocation.id === location.id

@@ -4,7 +4,6 @@ import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Filter, Search, Leaf, BookOpen } from "lucide-react";
-import { completeMenu as completeMenuData } from "@/lib/completeMenuData";
 import MenuCardModal from "@/components/menu/MenuCardModal";
 
 // All 74 menu items with the new images
@@ -262,7 +261,7 @@ export default function MenuPage() {
                         : "bg-gray-100 hover:bg-gray-200"
                     }`}
                   >
-                    {[...Array(level)].map((_, i) => "🌶️").join("")}
+                    {[...Array(level)].map(() => "🌶️").join("")}
                   </button>
                 ))}
               </div>

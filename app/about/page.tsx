@@ -97,9 +97,9 @@ export default function AboutPage() {
                   the belly, he decided to open a place that could bring back that feeling.
                 </p>
                 <p>
-                  He named it <span className="font-semibold">"Ammayi Veedu Pot Cook"</span> - "Ammayi Veedu"
+                  He named it <span className="font-semibold">&quot;Ammayi Veedu Pot Cook&quot;</span> - &quot;Ammayi Veedu&quot;
                   representing the warmth, care, and home-like love his grandmother (ammayi) embodied,
-                  and "Pot Cook" representing the traditional method of cooking in clay or pot for deeper,
+                  and &quot;Pot Cook&quot; representing the traditional method of cooking in clay or pot for deeper,
                   richer flavour.
                 </p>
                 <p>

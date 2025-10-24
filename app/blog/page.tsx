@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Calendar, Clock, User, ArrowRight, Tag, Search } from "lucide-react";
+import { Calendar, Clock, User, ArrowRight, Search } from "lucide-react";
 
 interface BlogPost {
   id: string;
@@ -38,6 +38,7 @@ const blogPosts: BlogPost[] = [
     id: "2",
     title: "Secret Behind Our Famous Naatu Koli Biryani",
     excerpt: "Learn about the special ingredients and techniques that make our country chicken biryani a customer favorite.",
+    content: "Our Naatu Koli Biryani uses country chicken marinated with special spices and cooked in traditional clay pots...",
     author: "Chef Kumar",
     date: "October 10, 2024",
     readTime: "4 min read",
@@ -145,7 +146,7 @@ export default function BlogPage() {
           >
             <h1 className="text-hero font-bold mb-4">Our Blog</h1>
             <p className="text-xl max-w-2xl mx-auto">
-              Stories, recipes, and insights from Ammayi's kitchen
+              Stories, recipes, and insights from Ammayi&apos;s kitchen
             </p>
           </motion.div>
         </div>

@@ -2,12 +2,11 @@
 
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Search, ChefHat, Utensils, Coffee, IceCream, Soup, Fish, ChevronDown, Download, Printer } from "lucide-react";
+import { X, Search, ChefHat, Utensils, Coffee, IceCream, Soup, Fish, Printer } from "lucide-react";
 import { completeMenu as completeMenuData } from "@/lib/completeMenuData";
-import type { MenuCategory } from "@/lib/completeMenuData";
 
 // Category icons mapping
-const categoryIcons: Record<string, any> = {
+const categoryIcons: Record<string, React.ComponentType<{ className?: string }>> = {
   "Starters": Utensils,
   "Soups": Soup,
   "Main Course": ChefHat,
@@ -24,7 +23,6 @@ interface MenuCardModalProps {
 
 export default function MenuCardModal({ isOpen, onClose }: MenuCardModalProps) {
   const [searchQuery, setSearchQuery] = useState("");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const categoryRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
   // Filter items based on search
@@ -154,7 +152,7 @@ export default function MenuCardModal({ isOpen, onClose }: MenuCardModalProps) {
                   {/* Menu Items */}
                   <div className="flex-1">
                     <div className="space-y-8">
-                      {(searchQuery ? filteredCategories : completeMenuData).map((category, categoryIndex) => (
+                      {(searchQuery ? filteredCategories : completeMenuData).map((category) => (
                         <div
                           key={category.name}
                           ref={(el) => { categoryRefs.current[category.name] = el; }}
