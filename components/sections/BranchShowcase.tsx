@@ -37,7 +37,7 @@ const branches: Branch[] = [
     address: "LCT Complex, 420, Trichy Rd, Singanallur, Coimbatore",
     phone: "+91 86086 61661",
     hours: "11:00 AM - 11:00 PM",
-    image: "/images/dishes/country chicken  - Copy.jpg",
+    image: "/images/unnamed.webp",
     specialties: ["Traditional Meals", "Special Kolambus", "Festival Specials"],
     description: "Experience authentic South Indian meals in a warm, family-friendly atmosphere"
   },
