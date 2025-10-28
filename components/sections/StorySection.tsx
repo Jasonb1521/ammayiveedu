@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { ChefHat, Award, Users, Heart } from "lucide-react";
 
@@ -78,10 +77,6 @@ const StorySection: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-
-            <Link href="/about" className="btn-primary inline-block">
-              Discover Our Full Story
-            </Link>
           </motion.div>
 
           {/* Images */}
