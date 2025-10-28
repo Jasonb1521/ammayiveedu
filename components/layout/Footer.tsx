@@ -17,12 +17,12 @@ const Footer: React.FC = () => {
     {
       name: "Ramanathapuram",
       address: "LCT Complex, 420, Trichy Rd, Singanallur, Coimbatore - 641005",
-      phone: "+91 99946 61661",
+      phone: "+91 86086 61661",
     },
     {
       name: "Saravanampatti",
       address: "14/11, Sathy Rd, Saravanampatti, Coimbatore - 641035",
-      phone: "+91 99946 61661",
+      phone: "+91 99436 61661",
     },
   ];
 
