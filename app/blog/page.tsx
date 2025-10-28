@@ -2,9 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { Calendar, Clock, User, ArrowRight, Search, BookOpen, X } from "lucide-react";
+import { Calendar, Clock, User, Search, BookOpen, X } from "lucide-react";
 
 interface BlogPost {
   id: string;
