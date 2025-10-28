@@ -17,12 +17,12 @@ const Footer: React.FC = () => {
     {
       name: "Ramanathapuram",
       address: "LCT Complex, 420, Trichy Rd, Singanallur, Coimbatore - 641005",
-      phone: "+91 86086 61661",
+      phone: "+91 99946 61661",
     },
     {
       name: "Saravanampatti",
       address: "14/11, Sathy Rd, Saravanampatti, Coimbatore - 641035",
-      phone: "+91 99436 61661",
+      phone: "+91 99946 61661",
     },
   ];
 
@@ -149,10 +149,10 @@ const Footer: React.FC = () => {
                 <div>
                   <p className="font-medium">Contact</p>
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+919994661661"
                     className="text-gray-300 hover:text-primary"
                   >
-                    +91 98765 43210
+                    +91 99946 61661
                   </a>
                 </div>
               </div>
