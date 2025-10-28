@@ -32,19 +32,22 @@ export const metadata: Metadata = {
   description: "Experience authentic South Indian cuisine cooked in traditional clay pots. Taste the love of Ammayi's kitchen with our signature biryanis and kolambus.",
   keywords: ["South Indian restaurant", "clay pot cooking", "biryani", "traditional food", "Coimbatore restaurant"],
   authors: [{ name: "Ammayi Veedu" }],
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   openGraph: {
     title: "Ammayi Veedu Pot Cook",
     description: "Traditional South Indian Restaurant",
     type: "website",
     locale: "en_IN",
     siteName: "Ammayi Veedu",
-    images: ['/icon.png'],
   },
   twitter: {
     card: "summary_large_image",
     title: "Ammayi Veedu Pot Cook",
     description: "Traditional South Indian Restaurant",
-    images: ['/icon.png'],
   },
   robots: {
     index: true,
