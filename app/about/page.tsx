@@ -48,7 +48,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="font-script text-3xl text-accent">Since 2017</span>
+            <span className="font-script text-3xl text-accent">Since 2014</span>
             <h1 className="text-hero font-bold mt-2 mb-4">Our Story</h1>
             <p className="text-xl max-w-3xl mx-auto">
               A journey of preserving traditional South Indian culinary heritage
@@ -103,7 +103,7 @@ export default function AboutPage() {
                   richer flavour.
                 </p>
                 <p>
-                  The restaurant was registered officially in July 2017, under his proprietorship.
+                  The restaurant was registered officially in July 2014, under his proprietorship.
                   The first small outlet was in Sidhapudur / New Siddhapudur, Coimbatore, where locals
                   responded well to offerings like chicken and mutton biryani, non-veg kolambus, fish fry, etc.
                   These dishes were cooked in clay pots, which gave them smoky, earthy undertones absent

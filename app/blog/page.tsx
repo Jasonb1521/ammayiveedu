@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Calendar, Clock, User, ArrowRight, Search } from "lucide-react";
+import { Calendar, Clock, User, ArrowRight, Search, BookOpen, X } from "lucide-react";
 
 interface BlogPost {
   id: string;
@@ -22,6 +22,40 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: "0",
+    title: "Pot luck at Ammayi's",
+    excerpt: "Food cooked the old-fashioned way is the USP of this modest restaurant. Featured in The Hindu newspaper.",
+    content: `Pot luck at Ammayi's
+
+Food cooked the old-fashioned way is the USP of this modest restaurant
+By Parshathy J. Nath
+
+The kitchen in Ammayi Veedu is filled with warm paanai sooks, davaras, and wooden chulhas. Not a fridge or a pressure cooker in sight. The meat delicacies are prepared hot and fresh, and served in banana leaves. Rice is made the old-fashioned way.
+
+The man paanais are brought from Mannargudi, where there is an entire community of artisans making these vessels. The red soil there is supposed to last for a long time, says Srinivasan, who along with Ramya Devi owns the restaurant and named it after his ammayi (grandmother). Most of the recipes are hers.
+
+The Nattukozhi Uppukari has a huge fan following, and is simply made with jeera, ramapattai, turmeric powder, and salt, cooked in Gingelly oil. The vessels enhance the taste of the dishes. The Nattukozhi biryani, carries the fragrance of the earthen vessels and the earthy masala.
+
+The meat just falls apart at the touch. Prawn curry and fry and nethili kuzhambu are served with steaming rice and sambhar. They also make special turkey biryani and turkey fry on Saturdays and Sundays.
+
+The meat side dishes follow Chettinad recipes that make use of home-ground masalas and black pepper. A cup of curd with sugar is kept handy in case the spice gets too much.
+
+"But these dishes do not wreck your health. We grind millets such as kambu and saamai with the masala so that the spice will not upset your stomach," says Ramya. A paneer soda is also a good way to put out the fire in your mouth, or try the good old peanut mittai.
+
+Breakfast time is busy with joggers making a beeline for idlis with Kudal kulambu, says Ramya. "It is a special Erode combination. Every day there serves you this breakfast."
+
+The vegetarians can have dosa, idlis, Salem roasts, and othappams of many kinds.
+
+Inside the kitchen, cook Veeramani gets busy with more orders. He has no time for chit-chat. What is the secret recipe behind his yummy side dishes? "Onion, tomato, chillies, and deep frying — that's all I do," he smiles.`,
+    author: "Parshathy J. Nath",
+    date: "November 20, 2024",
+    readTime: "6 min read",
+    category: "Press & Media",
+    image: "/images/dishes/mutton biriyani.jpg",
+    featured: true,
+    tags: ["Traditional Cooking", "Clay Pot", "The Hindu", "Press Coverage"],
+  },
+  {
     id: "1",
     title: "The Art of Clay Pot Cooking: Why It Makes Food Taste Better",
     excerpt: "Discover the ancient technique of clay pot cooking and how it enhances the flavors of traditional South Indian cuisine.",
@@ -30,7 +64,7 @@ const blogPosts: BlogPost[] = [
     date: "October 15, 2024",
     readTime: "5 min read",
     category: "Cooking Techniques",
-    image: "/images/dishes/pottery_pots.glb",
+    image: "/images/dishes/mutton biriyani.jpg",
     featured: true,
     tags: ["Clay Pot", "Traditional Cooking", "Heritage"],
   },
@@ -103,6 +137,7 @@ const blogPosts: BlogPost[] = [
 
 const categories = [
   "All Posts",
+  "Press & Media",
   "Cooking Techniques",
   "Recipes",
   "Health & Nutrition",
@@ -114,6 +149,7 @@ const categories = [
 export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState("All Posts");
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
 
   const filteredPosts = blogPosts.filter((post) => {
     const matchesCategory = selectedCategory === "All Posts" || post.category === selectedCategory;
@@ -192,16 +228,6 @@ export default function BlogPage() {
                       {post.title}
                     </h3>
                     <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-primary">{post.category}</span>
-                      <Link
-                        href={`/blog/${post.id}`}
-                        className="flex items-center gap-1 text-primary hover:gap-2 transition-all"
-                      >
-                        Read More
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
                   </div>
                 </div>
               </motion.article>
@@ -323,13 +349,13 @@ export default function BlogPage() {
                       ))}
                     </div>
 
-                    <Link
-                      href={`/blog/${post.id}`}
-                      className="flex items-center gap-1 text-primary hover:gap-2 transition-all text-sm font-medium"
+                    <button
+                      onClick={() => setSelectedPost(post)}
+                      className="flex items-center gap-2 text-primary hover:text-red-700 font-medium transition-colors"
                     >
+                      <BookOpen className="w-4 h-4" />
                       Read Article
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
+                    </button>
                   </div>
                 </motion.article>
               ))}
@@ -338,35 +364,77 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Newsletter Signup */}
-      <section className="section-padding bg-gradient-to-br from-primary to-secondary text-white">
-        <div className="container text-center">
+      {/* Blog Post Modal */}
+      {selectedPost && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl"
           >
-            <h2 className="text-h1 font-bold mb-4">Stay Updated</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Subscribe to our newsletter for the latest recipes, cooking tips,
-              and special offers from Ammayi Veedu
-            </p>
-            <form className="max-w-md mx-auto flex gap-4">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg text-dark focus:outline-none"
+            {/* Header */}
+            <div className="relative h-64">
+              <Image
+                src={selectedPost.image}
+                alt={selectedPost.title}
+                fill
+                className="object-cover"
               />
-              <button type="submit" className="btn-accent">
-                Subscribe
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+              <button
+                onClick={() => setSelectedPost(null)}
+                className="absolute top-4 right-4 bg-white/90 hover:bg-white p-2 rounded-full transition-colors"
+              >
+                <X className="w-6 h-6" />
               </button>
-            </form>
-            <p className="text-sm mt-4 opacity-75">
-              We respect your privacy. Unsubscribe at any time.
-            </p>
+              <div className="absolute bottom-6 left-6 right-6 text-white">
+                <h2 className="text-3xl font-bold mb-2">{selectedPost.title}</h2>
+                <div className="flex items-center gap-4 text-sm">
+                  <span className="flex items-center gap-1">
+                    <User className="w-4 h-4" />
+                    {selectedPost.author}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Calendar className="w-4 h-4" />
+                    {selectedPost.date}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Clock className="w-4 h-4" />
+                    {selectedPost.readTime}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="p-8 overflow-y-auto max-h-[calc(90vh-16rem)]">
+              <div className="prose prose-lg max-w-none">
+                {selectedPost.content.split('\n\n').map((paragraph, index) => (
+                  <p key={index} className="mb-4 text-gray-700 leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+
+              {/* Tags */}
+              <div className="mt-8 pt-6 border-t">
+                <h4 className="text-sm font-semibold text-gray-500 mb-3">Tags</h4>
+                <div className="flex flex-wrap gap-2">
+                  {selectedPost.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm"
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
-      </section>
+      )}
     </div>
   );
 }

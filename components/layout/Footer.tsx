@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-serif font-bold">Ammayi Veedu</h3>
-                <p className="text-xs text-gray-400">Since 2017</p>
+                <p className="text-xs text-gray-400">Since 2014</p>
               </div>
             </div>
             <p className="text-gray-300 mb-4">
@@ -129,7 +129,7 @@ const Footer: React.FC = () => {
                 <Clock className="w-5 h-5 text-primary mt-1" />
                 <div>
                   <p className="font-medium">Opening Hours</p>
-                  <p className="text-gray-300">Daily: 11:00 AM - 10:30 PM</p>
+                  <p className="text-gray-300">11:00 AM - 11:00 PM</p>
                 </div>
               </div>
               <div className="flex items-start gap-2">
@@ -147,7 +147,7 @@ const Footer: React.FC = () => {
               <div className="flex items-start gap-2">
                 <Phone className="w-5 h-5 text-primary mt-1" />
                 <div>
-                  <p className="font-medium">Call for Reservations</p>
+                  <p className="font-medium">Contact</p>
                   <a
                     href="tel:+919876543210"
                     className="text-gray-300 hover:text-primary"

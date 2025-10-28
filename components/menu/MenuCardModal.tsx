@@ -197,7 +197,7 @@ export default function MenuCardModal({ isOpen, onClose }: MenuCardModalProps) {
 
             {/* Footer */}
             <div className="bg-gradient-to-r from-primary to-secondary text-white p-4 text-center">
-              <p className="text-sm">All dishes cooked in traditional clay pots • Since 2017</p>
+              <p className="text-sm">All dishes cooked in traditional clay pots • Since 2014</p>
             </div>
           </motion.div>
         </>

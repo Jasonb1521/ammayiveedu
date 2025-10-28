@@ -51,7 +51,6 @@ const Header: React.FC = () => {
                 <h1 className="text-2xl font-serif font-bold text-primary">
                   Ammayi Veedu
                 </h1>
-                <p className="text-xs text-warm-brown">Pot Cook Restaurant</p>
               </div>
             </Link>
 

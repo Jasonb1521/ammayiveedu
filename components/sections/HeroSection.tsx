@@ -43,7 +43,7 @@ const HeroSection: React.FC = () => {
             className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6"
           >
             <Award className="w-5 h-5 text-yellow-400" />
-            <span className="text-sm font-medium">Award-Winning Traditional Cuisine Since 2017</span>
+            <span className="text-sm font-medium">Award-Winning Traditional Cuisine Since 2014</span>
           </motion.div>
 
           {/* Main Heading */}

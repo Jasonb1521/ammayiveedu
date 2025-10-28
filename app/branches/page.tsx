@@ -82,8 +82,8 @@ const branches: Branch[] = [
     phone: "+91 86086 61661",
     email: "Ammayiveedu.potcook@gmail.com",
     hours: {
-      weekdays: "11:00 AM - 11:00 PM",
-      weekends: "11:00 AM - 11:00 PM",
+      weekdays: "7:00 AM - 11:00 PM",
+      weekends: "7:00 AM - 11:00 PM",
     },
     coordinates: {
       lat: 11.0019,
@@ -289,11 +289,6 @@ export default function BranchesPage() {
 
                 <div className="space-y-3">
                   <div>
-                    <span className="text-sm text-gray-500">Manager</span>
-                    <p className="font-medium">{selectedBranch.manager}</p>
-                  </div>
-
-                  <div>
                     <span className="text-sm text-gray-500">Email</span>
                     <p className="font-medium">
                       <a href={`mailto:${selectedBranch.email}`} className="text-primary hover:underline">
@@ -408,12 +403,6 @@ export default function BranchesPage() {
                     </div>
                   </div>
 
-                  {/* Branch Manager */}
-                  <div className="border-t pt-4">
-                    <p className="text-sm text-gray-600 mb-1">Branch Manager</p>
-                    <p className="font-semibold">{selectedBranch.manager}</p>
-                  </div>
-
                   {/* Call to Action */}
                   <div className="space-y-3">
                     <a
@@ -433,34 +422,6 @@ export default function BranchesPage() {
                 </div>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="section-padding bg-gradient-to-br from-primary to-secondary text-white">
-        <div className="container text-center">
-          <h2 className="text-h1 font-bold mb-6">Need Help?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Our team is here to assist you with reservations, catering services,
-            or any other inquiries
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <div>
-              <Phone className="w-8 h-8 mx-auto mb-3" />
-              <h3 className="font-semibold mb-2">Call Us</h3>
-              <p>+91 98765 43210</p>
-            </div>
-            <div>
-              <Mail className="w-8 h-8 mx-auto mb-3" />
-              <h3 className="font-semibold mb-2">Email Us</h3>
-              <p>Ammayiveedu.potcook@gmail.com</p>
-            </div>
-            <div>
-              <Clock className="w-8 h-8 mx-auto mb-3" />
-              <h3 className="font-semibold mb-2">Open Hours</h3>
-              <p>7:00 AM - 11:00 PM</p>
-            </div>
           </div>
         </div>
       </section>

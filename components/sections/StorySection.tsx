@@ -38,7 +38,7 @@ const StorySection: React.FC = () => {
 
             <div className="space-y-4 text-gray-600 mb-8">
               <p>
-                Founded in 2017 by Shanmugam Srinivasan, Ammayi Veedu began as a
+                Founded in 2014 by Shanmugam Srinivasan, Ammayi Veedu began as a
                 humble endeavor to preserve the authentic flavors of South Indian
                 home cooking. Our name, meaning &quot;Grandmother&apos;s House,&quot; reflects
                 our commitment to serving food that tastes like it came straight
@@ -130,7 +130,7 @@ const StorySection: React.FC = () => {
                     <ChefHat className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-dark">2017</div>
+                    <div className="text-2xl font-bold text-dark">2014</div>
                     <div className="text-sm text-gray-600">Est. Year</div>
                   </div>
                 </div>

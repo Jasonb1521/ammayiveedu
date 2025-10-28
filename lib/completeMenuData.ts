@@ -18,13 +18,13 @@ export const completeMenu: MenuCategory[] = [
     name: "South Indian Breakfast",
     tamilName: "தென்னிந்திய காலை உணவு",
     items: [
-      { name: "Appam", tamilName: "ஆப்பம்", price: 45, description: "Soft hoppers made from fermented rice batter" },
-      { name: "Egg Appam", tamilName: "முட்டை ஆப்பம்", price: 65, description: "Appam topped with egg" },
-      { name: "Idiyappam", tamilName: "இடியாப்பம்", price: 50, description: "String hoppers served with coconut milk" },
-      { name: "Idly (1 Piece)", tamilName: "இட்லி (1)", price: 18, description: "Steamed rice cake" },
-      { name: "Chilli Idly", tamilName: "சில்லி இட்லி", price: 75, description: "Fried idly tossed in spicy sauce" },
-      { name: "Paniyaram", tamilName: "பணியாரம்", price: 75, description: "Crispy rice dumplings" },
-      { name: "Egg Paniyaram", tamilName: "முட்டை பணியாரம்", price: 85, description: "Paniyaram with egg topping" },
+      { name: "Appam", tamilName: "ஆப்பம்", price: 45 },
+      { name: "Egg Appam", tamilName: "முட்டை ஆப்பம்", price: 65 },
+      { name: "Idiyappam", tamilName: "இடியாப்பம்", price: 50 },
+      { name: "Idly (1 Piece)", tamilName: "இட்லி (1)", price: 18 },
+      { name: "Chilli Idly", tamilName: "சில்லி இட்லி", price: 75 },
+      { name: "Paniyaram", tamilName: "பணியாரம்", price: 75 },
+      { name: "Egg Paniyaram", tamilName: "முட்டை பணியாரம்", price: 85 },
     ]
   },
   {
@@ -32,7 +32,7 @@ export const completeMenu: MenuCategory[] = [
     name: "Uttapam Varieties",
     tamilName: "ஊத்தப்பம் வகைகள்",
     items: [
-      { name: "Uttapam", tamilName: "ஊத்தப்பம்", price: 65, description: "Thick pancake with toppings" },
+      { name: "Uttapam", tamilName: "ஊத்தப்பம்", price: 65 },
       { name: "Egg Uttapam", tamilName: "முட்டை ஊத்தப்பம்", price: 80 },
       { name: "Tomato Uttapam", tamilName: "தக்காளி ஊத்தப்பம்", price: 65 },
       { name: "Variety Uttapam (5)", tamilName: "வெரைட்டி ஊத்தப்பம் (5)", price: 130 },
@@ -45,8 +45,8 @@ export const completeMenu: MenuCategory[] = [
     name: "Dosa Varieties",
     tamilName: "தோசை வகைகள்",
     items: [
-      { name: "Kal Dosai", tamilName: "கல் தோசை", price: 40, description: "Stone-cooked crispy dosa" },
-      { name: "Sadha Dosai", tamilName: "சாதா தோசை", price: 50, description: "Plain crispy dosa" },
+      { name: "Kal Dosai", tamilName: "கல் தோசை", price: 40 },
+      { name: "Sadha Dosai", tamilName: "சாதா தோசை", price: 50 },
       { name: "Egg Kal Dosai", tamilName: "முட்டை கல் தோசை", price: 85 },
       { name: "Egg Dosai", tamilName: "முட்டை தோசை", price: 85 },
       { name: "Mutton Dosai", tamilName: "மட்டன் தோசை", price: 190 },
@@ -149,8 +149,8 @@ export const completeMenu: MenuCategory[] = [
     name: "Soups",
     tamilName: "சூப்",
     items: [
-      { name: "Attukal Soup", tamilName: "ஆட்டுக்கால் சூப்", price: 140, description: "Traditional goat leg soup" },
-      { name: "Chicken Soup", tamilName: "நாட்டு கோழி சூப்", price: 130, description: "Country chicken clear soup" },
+      { name: "Attukal Soup", tamilName: "ஆட்டுக்கால் சூப்", price: 140 },
+      { name: "Chicken Soup", tamilName: "நாட்டு கோழி சூப்", price: 130 },
     ]
   },
   {
@@ -194,7 +194,7 @@ export const completeMenu: MenuCategory[] = [
     name: "Meals",
     tamilName: "சாப்பாடு",
     items: [
-      { name: "Meals", tamilName: "சாப்பாடு", price: 150, description: "Complete South Indian meals with variety rice, sambar, rasam, curd" },
+      { name: "Meals", tamilName: "சாப்பாடு", price: 150 },
     ]
   },
   {
@@ -202,11 +202,11 @@ export const completeMenu: MenuCategory[] = [
     name: "Biryani Specialties",
     tamilName: "பிரியாணி சிறப்பு",
     items: [
-      { name: "Mutton Biryani", tamilName: "மட்டன் பிரியாணி", price: 300, description: "Aromatic basmati rice with tender mutton" },
-      { name: "Country Chicken Biryani", tamilName: "நாட்டு கோழி பிரியாணி", price: 280, description: "Traditional biryani with country chicken" },
-      { name: "Chicken Biryani", tamilName: "சிக்கன் பிரியாணி", price: 250, description: "Classic chicken biryani" },
-      { name: "Van Kozhi Biryani", tamilName: "வான் கோழி பிரியாணி", price: 400, description: "Special turkey biryani" },
-      { name: "Plain Biryani", tamilName: "பிளைன் பிரியாணி", price: 170, description: "Fragrant biryani rice without meat" },
+      { name: "Mutton Biryani", tamilName: "மட்டன் பிரியாணி", price: 300 },
+      { name: "Country Chicken Biryani", tamilName: "நாட்டு கோழி பிரியாணி", price: 280 },
+      { name: "Chicken Biryani", tamilName: "சிக்கன் பிரியாணி", price: 250 },
+      { name: "Van Kozhi Biryani", tamilName: "வான் கோழி பிரியாணி", price: 400 },
+      { name: "Plain Biryani", tamilName: "பிளைன் பிரியாணி", price: 170 },
     ]
   },
   {

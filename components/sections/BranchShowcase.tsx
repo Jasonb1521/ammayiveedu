@@ -28,7 +28,7 @@ const branches: Branch[] = [
     hours: "7:00 AM - 11:00 PM",
     image: "/images/Ammayi_Veedu_Siddhapudur.jpeg",
     specialties: ["Clay Pot Biryani", "Weekend Buffet", "Live Dosa Counter"],
-    description: "Our flagship location featuring traditional clay pot cooking with a modern dining experience"
+    description: "Our flagship location featuring authentic traditional clay pot cooking"
   },
   {
     id: "ramanathapuram",
@@ -36,10 +36,10 @@ const branches: Branch[] = [
     shortName: "Ramanathapuram Branch",
     address: "LCT Complex, 420, Trichy Rd, Singanallur, Coimbatore",
     phone: "+91 86086 61661",
-    hours: "11:00 AM - 11:00 PM",
+    hours: "7:00 AM - 11:00 PM",
     image: "/images/unnamed.webp",
     specialties: ["Traditional Meals", "Special Kolambus", "Festival Specials"],
-    description: "Experience authentic South Indian meals in a warm, family-friendly atmosphere"
+    description: "Experience authentic South Indian meals in a warm, family-friendly atmosphere and outdoor seating"
   },
   {
     id: "saravanampatti",
@@ -50,7 +50,7 @@ const branches: Branch[] = [
     hours: "11:00 AM - 11:00 PM",
     image: "/images/dishes/IMG_3200.jpg",
     specialties: ["Seafood Specials", "Corporate Catering", "Outdoor BBQ"],
-    description: "Our newest branch with outdoor seating and live music on weekends"
+    description: "Our newest branch featuring outdoor dining with a vibrant atmosphere perfect for family gatherings and celebrations"
   }
 ];
 
@@ -112,39 +112,6 @@ const BranchShowcase: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/40" />
           </motion.div>
 
-          {/* Modern Branch Indicator */}
-          <div className="absolute top-12 left-1/2 transform -translate-x-1/2 z-20">
-            <motion.div
-              className="flex items-center gap-6"
-              initial={{ y: -20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.3 }}
-            >
-              <span className="text-white/40 text-xs font-semibold tracking-[0.3em] uppercase">Branch</span>
-              <div className="flex gap-3">
-                {branches.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentBranch(index)}
-                    className={`relative transition-all duration-500 ${
-                      index === currentBranch
-                        ? "w-12 h-1 bg-red-600"
-                        : "w-8 h-1 bg-white/20 hover:bg-white/40"
-                    }`}
-                  >
-                    {index === currentBranch && (
-                      <motion.div
-                        className="absolute inset-0 bg-red-600 blur-lg"
-                        animate={{ opacity: [0.5, 1, 0.5] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                      />
-                    )}
-                  </button>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-
           {/* Main Content */}
           <div className="container relative z-10 h-full flex items-center px-4 md:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full">
@@ -158,13 +125,13 @@ const BranchShowcase: React.FC = () => {
 
                 {/* Branch Name with Modern Typography */}
                 <motion.div
-                  className="mb-6"
+                  className="mb-4 md:mb-6"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
-                    <span className="block text-red-600 font-serif mb-2">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight">
+                    <span className="block text-red-600 font-serif mb-1 md:mb-2">
                       {branch.shortName.split(' ')[0]}
                     </span>
                     <span className="block text-white font-sans">
@@ -175,7 +142,7 @@ const BranchShowcase: React.FC = () => {
 
                 {/* Description with Better Typography */}
                 <motion.p
-                  className="text-lg lg:text-xl text-gray-300 mb-10 leading-relaxed font-light"
+                  className="text-sm sm:text-base lg:text-lg xl:text-xl text-gray-300 mb-6 md:mb-8 lg:mb-10 leading-relaxed font-light"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.6 }}
@@ -185,75 +152,52 @@ const BranchShowcase: React.FC = () => {
 
                 {/* Branch Details with Modern Cards */}
                 <motion.div
-                  className="space-y-4 mb-10"
+                  className="space-y-3 md:space-y-4 mb-6 md:mb-8 lg:mb-10"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.7 }}
                 >
-                  <div className="group flex items-start gap-4 p-3 rounded-xl hover:bg-white/5 transition-all duration-300">
-                    <div className="p-2.5 bg-red-600/20 rounded-lg">
-                      <MapPin className="w-5 h-5 text-red-600" />
+                  <div className="group flex items-start gap-3 md:gap-4 p-2 md:p-3 rounded-xl hover:bg-white/5 transition-all duration-300">
+                    <div className="p-2 md:p-2.5 bg-red-600/20 rounded-lg flex-shrink-0">
+                      <MapPin className="w-4 h-4 md:w-5 md:h-5 text-red-600" />
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0">
                       <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Location</p>
-                      <p className="text-white font-medium leading-relaxed">{branch.address}</p>
+                      <p className="text-sm md:text-base text-white font-medium leading-relaxed break-words">{branch.address}</p>
                     </div>
                   </div>
 
-                  <div className="group flex items-start gap-4 p-3 rounded-xl hover:bg-white/5 transition-all duration-300">
-                    <div className="p-2.5 bg-red-600/20 rounded-lg">
-                      <Phone className="w-5 h-5 text-red-600" />
+                  <div className="group flex items-start gap-3 md:gap-4 p-2 md:p-3 rounded-xl hover:bg-white/5 transition-all duration-300">
+                    <div className="p-2 md:p-2.5 bg-red-600/20 rounded-lg flex-shrink-0">
+                      <Phone className="w-4 h-4 md:w-5 md:h-5 text-red-600" />
                     </div>
                     <div className="flex-1">
                       <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Contact</p>
-                      <p className="text-white font-medium">{branch.phone}</p>
+                      <p className="text-sm md:text-base text-white font-medium">{branch.phone}</p>
                     </div>
                   </div>
 
-                  <div className="group flex items-start gap-4 p-3 rounded-xl hover:bg-white/5 transition-all duration-300">
-                    <div className="p-2.5 bg-red-600/20 rounded-lg">
-                      <Clock className="w-5 h-5 text-red-600" />
+                  <div className="group flex items-start gap-3 md:gap-4 p-2 md:p-3 rounded-xl hover:bg-white/5 transition-all duration-300">
+                    <div className="p-2 md:p-2.5 bg-red-600/20 rounded-lg flex-shrink-0">
+                      <Clock className="w-4 h-4 md:w-5 md:h-5 text-red-600" />
                     </div>
                     <div className="flex-1">
                       <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Open Hours</p>
-                      <p className="text-white font-medium">{branch.hours}</p>
+                      <p className="text-sm md:text-base text-white font-medium">{branch.hours}</p>
                     </div>
-                  </div>
-                </motion.div>
-
-                {/* Specialties with Modern Pills */}
-                <motion.div
-                  className="mb-10"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.8 }}
-                >
-                  <p className="text-xs text-gray-400 uppercase tracking-wider mb-4">Specialties</p>
-                  <div className="flex flex-wrap gap-3">
-                    {branch.specialties.map((specialty, index) => (
-                      <motion.span
-                        key={specialty}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.9 + index * 0.1 }}
-                        className="bg-white/10 backdrop-blur-xl border border-white/20 px-4 py-2 rounded-full text-sm text-white/90 hover:bg-white/20 transition-all duration-300"
-                      >
-                        {specialty}
-                      </motion.span>
-                    ))}
                   </div>
                 </motion.div>
 
                 {/* Modern CTA Buttons */}
                 <motion.div
-                  className="flex flex-col sm:flex-row gap-4"
+                  className="flex flex-col sm:flex-row gap-3 md:gap-4"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1 }}
                 >
                   <Link
                     href="/menu"
-                    className="group relative px-8 py-4 bg-red-600 text-white rounded-xl font-semibold text-center overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-600/30"
+                    className="group relative px-6 py-3 md:px-8 md:py-4 bg-red-600 text-white rounded-xl font-semibold text-sm md:text-base text-center overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-600/30"
                   >
                     <span className="relative z-10 flex items-center justify-center gap-2">
                       View Our Menu
@@ -266,9 +210,9 @@ const BranchShowcase: React.FC = () => {
                     href={`https://maps.google.com/?q=${branch.address}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group px-8 py-4 bg-white/10 backdrop-blur-xl border border-white/30 text-white rounded-xl font-semibold text-center hover:bg-white/20 hover:border-white/50 transition-all duration-300 hover:shadow-xl flex items-center justify-center gap-2"
+                    className="group px-6 py-3 md:px-8 md:py-4 bg-white/10 backdrop-blur-xl border border-white/30 text-white rounded-xl font-semibold text-sm md:text-base text-center hover:bg-white/20 hover:border-white/50 transition-all duration-300 hover:shadow-xl flex items-center justify-center gap-2"
                   >
-                    <Navigation className="w-5 h-5" />
+                    <Navigation className="w-4 h-4 md:w-5 md:h-5" />
                     Get Directions
                     <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                   </a>
