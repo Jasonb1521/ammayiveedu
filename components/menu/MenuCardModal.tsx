@@ -124,7 +124,7 @@ export default function MenuCardModal({ isOpen, onClose }: MenuCardModalProps) {
               <div className="max-w-7xl mx-auto">
                 <div className="flex gap-6">
                   {/* Desktop Category Sidebar */}
-                  <aside className="hidden md:block w-64 sticky top-0 h-fit">
+                  <aside className="hidden md:block w-64">
                     <div className="bg-white rounded-xl shadow-lg p-4">
                       <h4 className="font-bold text-lg mb-3 text-primary">Categories</h4>
                       <nav className="space-y-1">
