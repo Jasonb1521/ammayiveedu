@@ -11,7 +11,7 @@ const featuredMenuItems = [
   // Biryani Items
   { id: "1", name: "Chicken Fry", tamilName: "சிக்கன் வறுவல்", price: 180, category: "Chicken", image: "/images/dishes/chicken fry.jpg", spiceLevel: 3, isVeg: false, rating: 4.6, cookTime: "25 mins" },
   { id: "2", name: "Mutton Biryani", tamilName: "மட்டன் பிரியாணி", price: 300, category: "Biryani", image: "/images/dishes/mutton biriyani.jpg", spiceLevel: 3, isVeg: false, rating: 4.9, cookTime: "50 mins" },
-  { id: "3", name: "Naatu Koli Biryani", tamilName: "நாட்டுக்கோழி பிரியாணி", price: 300, category: "Biryani", image: "/images/dishes/naatu koli biriyani.jpg", spiceLevel: 4, isVeg: false, rating: 4.9, cookTime: "55 mins", isSpecial: true },
+  { id: "3", name: "Naatu Koli Biryani", tamilName: "நாட்டுக்கோழி பிரியாணி", price: 280, category: "Biryani", image: "/images/dishes/naatu koli biriyani.jpg", spiceLevel: 4, isVeg: false, rating: 4.9, cookTime: "55 mins", isSpecial: true },
   { id: "4", name: "Country Chicken Biryani", tamilName: "நாட்டுக்கோழி பிரியாணி", price: 280, category: "Biryani", image: "/images/dishes/country chicken biriyani.jpg", spiceLevel: 4, isVeg: false, rating: 4.8, cookTime: "55 mins" },
   { id: "5", name: "Plain Biryani", tamilName: "சாதா பிரியாணி", price: 170, category: "Biryani", image: "/images/dishes/plain biriyani.jpg", spiceLevel: 2, isVeg: true, rating: 4.3, cookTime: "30 mins" },
 

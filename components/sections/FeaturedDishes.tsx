@@ -107,7 +107,7 @@ const FeaturedDishes: React.FC = () => {
           <h2 className="text-h1 font-bold mt-2 mb-4">Featured Specialties</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Discover our most loved dishes, each prepared with traditional recipes
-            passed down through generations and cooked in authentic clay pots
+            passed down through generations
           </p>
         </motion.div>
 
