@@ -21,7 +21,7 @@ const featuredDishes: Dish[] = [
   {
     id: "1",
     name: "Naatu Koli Biryani",
-    description: "Country chicken biryani cooked in traditional clay pot with aromatic spices",
+    description: "Country chicken biryani cooked with aromatic spices",
     price: 450,
     image: "/images/dishes/6naatu koli biriyani.jpg",
     category: "Biryani",
