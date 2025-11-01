@@ -28,7 +28,7 @@ const branches: Branch[] = [
     hours: "7:00 AM - 11:00 PM",
     image: "/images/Ammayi_Veedu_Siddhapudur.jpeg",
     specialties: ["Clay Pot Biryani", "Weekend Buffet", "Live Dosa Counter"],
-    description: "Our flagship location featuring authentic traditional clay pot cooking"
+    description: ""
   },
   {
     id: "ramanathapuram",
@@ -50,7 +50,7 @@ const branches: Branch[] = [
     hours: "11:00 AM - 11:00 PM",
     image: "/images/dishes/IMG_3200.jpg",
     specialties: ["Seafood Specials", "Corporate Catering", "Outdoor BBQ"],
-    description: "Our newest branch featuring outdoor dining with a vibrant atmosphere perfect for family gatherings and celebrations"
+    description: "Our newest branch featuring a vibrant atmosphere perfect for family gatherings and celebrations"
   }
 ];
 
