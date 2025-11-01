@@ -28,7 +28,7 @@ const branches: Branch[] = [
     hours: "7:00 AM - 11:00 PM",
     image: "/images/Ammayi_Veedu_Siddhapudur.jpeg",
     specialties: ["Clay Pot Biryani", "Weekend Buffet", "Live Dosa Counter"],
-    description: ""
+    description: "Our flagship location featuring authentic traditional cooking"
   },
   {
     id: "ramanathapuram",
